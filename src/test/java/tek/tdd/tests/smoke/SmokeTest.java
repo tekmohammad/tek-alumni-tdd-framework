@@ -11,7 +11,7 @@ import tek.tdd.utility.SeleniumUtilities;
 
 public class SmokeTest extends UITestBase {
 
-    @Test
+    @Test(testName = "Login Test Happy Path")
     public void testLoginHappyPath() throws InterruptedException {
         /*
         Login with credentials and validate CSR Portal

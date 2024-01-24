@@ -52,7 +52,9 @@ public class BaseSetup {
         }
     }
 
-    public String getProperty(String key) {
+
+
+    private String getProperty(String key) {
         return this.properties.get(key).toString();
     }
 
@@ -61,6 +63,7 @@ public class BaseSetup {
         //url for environment.
         String browser = getProperty("browser.type");
         boolean isHeadless = Boolean.parseBoolean(getProperty("browser.isHeadless"));
+        LOG.debug("Running on browser {} with headless {}" , browser , isHeadless);
         IBrowser browserInterface;
         switch (browser.toLowerCase()) {
             case "chrome":
