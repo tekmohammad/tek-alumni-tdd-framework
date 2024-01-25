@@ -10,6 +10,7 @@ import org.testng.annotations.Ignore;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import tek.tdd.base.UITestBase;
+import tek.tdd.utility.DateTimeUtility;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -40,9 +41,8 @@ public class PlanCodeTests extends UITestBase {
     public void testPlanCodeCreatedDate() {
         LOG.info("Starting plan code created date");
 
-        LocalDate now = LocalDate.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
-        String expectedDate = formatter.format(now);
+
+        String expectedDate = DateTimeUtility.getCurrentDate();
         LOG.debug("Current Date {}" , expectedDate);
 
         var list = planCodePage.getCreatedDateText();
