@@ -13,8 +13,6 @@ import tek.tdd.utility.Constants;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Properties;
 
 public class BaseSetup {
