@@ -50,6 +50,10 @@ public class BaseSetup {
         }
     }
 
+    public String getApiBaseUrl()  {
+        return getProperty("api.base_url");
+    }
+
 
 
     private String getProperty(String key) {
